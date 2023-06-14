@@ -24,7 +24,9 @@ function deg2rad(deg) {
 }
 ThunkableWebviewerExtension.receiveMessage(function(message) {
   // Do something with your message
-  alert(message)
+//  alert(message)
+  var dd = getDistanceFromLatLonInKm(message.lat,message.lon,message.lat2,message.lon2);
+  ThunkableWebviewerExtension.postMessage(dd);
 });
     </script>
 </html>
